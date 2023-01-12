@@ -1,4 +1,6 @@
 ## Инициализация проекта
+
+(!) _Требуется php8.2_
  
 1. git clone git@github.com:AgreGAD/test-egg.git
 2. cd test-egg

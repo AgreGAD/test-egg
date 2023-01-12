@@ -1,9 +1,9 @@
 DIR?=${CURDIR}
 
-all: deps compose-up
+all: deps up
 
 deps:
 	php composer.phar install
 
-compose-up:
+up:
 	docker-compose up -d

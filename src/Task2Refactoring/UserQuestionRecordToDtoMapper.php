@@ -9,7 +9,7 @@ use Task\Task2Refactoring\Dto\Question;
 use Task\Task2Refactoring\Dto\UserQuestion;
 use Task\Task2Refactoring\Dto\Gender;
 
-class UserQueryToDtoMapper
+class UserQuestionRecordToDtoMapper
 {
     /**
      * @param array{
@@ -21,7 +21,7 @@ class UserQueryToDtoMapper
      *     user_id: int
      *     } $record
      */
-    public function findUserQuestions(array $record): UserQuestion
+    public function map(array $record): UserQuestion
     {
         $user = new User(
             $record['name'],

@@ -11,7 +11,7 @@ readonly class CodeAfter
 {
     public function __construct(
         private mysqli $dbConnection,
-        private UserQueryToDtoMapper $userQueryToDtoMapper,
+        private UserQuestionRecordToDtoMapper $userQuestionRecordToDtoMapper,
     ) {
     }
 
@@ -36,7 +36,7 @@ WHERE q.catalog_id = ?
         $result = [];
 
         while ($record = $queryResult->fetch_assoc()) {
-            $result[] = $this->userQueryToDtoMapper->findUserQuestions($record);
+            $result[] = $this->userQuestionRecordToDtoMapper->map($record);
         }
 
         $stmt->free_result();

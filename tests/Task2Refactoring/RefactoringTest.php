@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 use Task\Task2Refactoring\CodeBefore;
 use mysqli;
 use Task\Task2Refactoring\CodeAfter;
-use Task\Task2Refactoring\UserQueryToDtoMapper;
+use Task\Task2Refactoring\UserQuestionRecordToDtoMapper;
 
 final class RefactoringTest extends TestCase
 {
@@ -17,7 +17,7 @@ final class RefactoringTest extends TestCase
         $codeBefore = new CodeBefore();
         $codeAfter = new CodeAfter(
             $this->createDbConnection(),
-            new UserQueryToDtoMapper(),
+            new UserQuestionRecordToDtoMapper(),
         );
         $catalogId = 1;
 
